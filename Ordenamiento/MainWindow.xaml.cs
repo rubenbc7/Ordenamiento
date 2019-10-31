@@ -51,7 +51,7 @@ namespace Ordenamiento
             {
                 for(i=0;i<miLista.Count; i++)
                 {
-                    if (miLista[i] > miLista[gap + i])
+                    if (gap + i < miLista.Count && miLista[i] > miLista[gap + i])
                     {
                         temp = miLista[i];
                         miLista[i] = miLista[gap + i];
@@ -61,6 +61,25 @@ namespace Ordenamiento
                 gap--;
             }
             
+        }
+
+        private void BtnBubble_Click(object sender, RoutedEventArgs e)
+        {
+            bool intercambio = false;
+            do
+            {
+                for (int i = 0; i < miLista.Count - 1; i++)
+                {
+                    if(miLista[i] > miLista[ i + 1])
+                    {
+                        int temp = miLista[i];
+                        miLista[i] = miLista[i + 1];
+                        miLista[i + 1] = temp;
+                        intercambio = true;
+                    }
+                 
+                }
+            } while (intercambio);
         }
     }
 }
