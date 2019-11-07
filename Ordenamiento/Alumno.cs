@@ -20,7 +20,7 @@ namespace Ordenamiento
         }
         public override string ToString()
         {
-            return this.Nombre + "(" + this.Promedio.ToString() + ")";
+            return this.Nombre + "(" + this.Promedio.ToString() + ", " +this.Faltas.ToString() + ")";
         }
     }
 }
